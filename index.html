@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100vh;
+        margin: 0%;
+        background-color: black;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .box {
+        width: 30px;
+        height: 30px;
+        transition: transform 1s;
+        margin: 2px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 10%;
+      }
+
+      .box:hover {
+        transform: scale(2);
+        animation: animateDown 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes animateDown {
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="container"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
